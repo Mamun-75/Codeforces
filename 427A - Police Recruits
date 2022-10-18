@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n, untreated = 0, officers = 0, event;
+    cin>>n;
+
+    for(int i = 0; i<n; i++ )
+    {
+        cin>>event;
+        if(event<0)
+        {
+            if(officers == 0)
+            {
+                untreated++;
+            }
+            else
+            {
+                officers--;
+            }
+        }
+        else
+        {
+            officers+=event;
+        }
+    }
+    cout<<untreated<<endl;
+}
